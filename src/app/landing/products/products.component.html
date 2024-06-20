@@ -1,0 +1,20 @@
+<div>
+    <div *ngFor="let data of received">
+        <p>{{data.
+            mst_cat_name
+            }}</p>
+        <ul>
+            <li *ngFor="let details of data.product_details">
+                <input type="checkbox" [checked]="details.isChecked"  (change)="setOpposite(data.mst_cat_id,details.mst_product_id)"/>
+                {{details.mst_product_name}}
+            </li>
+        </ul>
+    </div>
+    <button (click)="navigate()">show selected products</button>
+</div>
+
+<div *ngIf="navigateTriggered">
+   <app-selected [received]="received"></app-selected>
+    
+</div>
+

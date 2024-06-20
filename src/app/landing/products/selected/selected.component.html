@@ -1,0 +1,15 @@
+<div>
+    <div *ngFor="let data of received">
+        <p *ngIf="data.show">{{data.
+            mst_cat_name
+            }}</p>
+        <div>
+            <div *ngFor="let details of data.product_details">
+                <p *ngIf="details.isChecked"> {{details.mst_product_name}}</p>
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+

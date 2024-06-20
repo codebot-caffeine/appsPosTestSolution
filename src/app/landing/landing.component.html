@@ -1,0 +1,24 @@
+<div>
+         
+    <div  style="display:flex;flex-direction:column;justify-content: flex-start;align-items: flex-start;">
+     <form (submit)="submitApi()" id="submission" [formGroup]="newForm">
+       <div class="d-flex">
+         <label for="product">product id</label>
+         <input formControlName="productID"  style="width: 100px;" id="product"/>
+       </div>
+       <div class="d-flex">
+         <label for="branch">branch id</label>
+         <input formControlName="branchID" style="width: 100px;" id="branch"/>
+       </div>
+       <div class="d-flex">
+         <input type="checkbox" formControlName="repeatSet" />
+       </div>
+       <button type="submit" form="submission">Submit</button>
+     </form>
+     
+    </div>
+    
+ </div>
+ <!-- <div *ngIf="final.length > 0">  -->
+<app-products [received]="final"  *ngIf="submittriggered"></app-products>
+

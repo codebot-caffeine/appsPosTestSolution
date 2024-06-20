@@ -37,7 +37,7 @@ export class LandingComponent {
   final:any = []
   submittriggered:boolean = false
   submitApi(){
-    console.log(this.newForm.controls)
+    // console.log(this.newForm.controls)
     if(this.newForm.valid){
       let url = "http://appspos.apdeliver.com/AppsPOSDemoSAS/api/apis/Get_Category_By_ProductId"
       let entityObject = {
